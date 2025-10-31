@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sheet"
 import { Office } from '@/components/office';
 import { Content } from '@/components/content';
+import { Footer } from '@/components/Footer';
 export default function Home() {
   return (
    
@@ -208,6 +209,15 @@ export default function Home() {
           <div>
             <h1 className="pt-20 pb-20"></h1>
           </div>
+
+
+
+          
+          {/* Arnav Jain */}
+          {/* Footer  */}
+          
+          <Footer />
+
   
     </div>
   );
