@@ -10,6 +10,7 @@ import {
 import { Office } from '@/components/office';
 import { Content } from '@/components/content';
 import { Footer } from '@/components/Footer';
+import Numbers from '@/components/Numbers';
 export default function Home() {
   return (
    
@@ -210,8 +211,8 @@ export default function Home() {
             <h1 className="pt-20 pb-20"></h1>
           </div>
 
-
-
+          
+          <Numbers/>
           
           {/* Arnav Jain */}
           {/* Footer  */}
