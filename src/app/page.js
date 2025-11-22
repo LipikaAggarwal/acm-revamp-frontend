@@ -11,11 +11,9 @@ import { Office } from '@/components/office';
 import { Content } from '@/components/content';
 // import { AnnouncementCard } from '@/components/AnnouncementCard';
 import Numbers from '@/components/Numbers';
-<<<<<<< Updated upstream
 import { BlogSection } from '@/components/blogs';
-=======
 import { Footer } from '@/components/Footer';
->>>>>>> Stashed changes
+
 export default function Home() {
   return (
    
