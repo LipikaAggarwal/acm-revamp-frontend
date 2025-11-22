@@ -9,9 +9,13 @@ import {
 } from "@/components/ui/sheet"
 import { Office } from '@/components/office';
 import { Content } from '@/components/content';
-import { Footer } from '@/components/Footer';
+// import { AnnouncementCard } from '@/components/AnnouncementCard';
 import Numbers from '@/components/Numbers';
+<<<<<<< Updated upstream
 import { BlogSection } from '@/components/blogs';
+=======
+import { Footer } from '@/components/Footer';
+>>>>>>> Stashed changes
 export default function Home() {
   return (
    
@@ -151,12 +155,15 @@ export default function Home() {
           <BlogSection />
             {/* office bearers */}
           <div className="bg-white rounded-3xl shadow-lg lg:mt-0 w-[96%] mx-auto min-h-[52vh] flex items-center justify-center relative">
-            <div className="bg-blue-500 rounded-3xl p-2 group absolute top-0 left-0 w-[200px] md:w-[250px] sm:w-[200]">
+            <div className="bg-blue-500 rounded-2xl p-2 group absolute top-0 left-0 w-[200px] md:w-[250px] sm:w-[200]">
               <img
-                src="/element1.png"
+                src="/element4.png"
                 alt="Default"
                 className=""
               />
+            <h2 className="absolute top-3 left-10 lg:top-5 lg:left-16 md:top-5 md:left-14 text-black font-semibold text-lg md:text-xl">
+              Office Bearers
+            </h2>
             </div>
             <div className="bg-blue-500 rounded-3xl group absolute top-0 right-0 w-[100px] md:w-[150px] sm:w-[100] ">
               <img
@@ -221,12 +228,13 @@ export default function Home() {
                 ))}
             </div>
           </div>
-          <div>
+          {/* <div>
             <h1 className="pt-20 pb-20"></h1>
-          </div>
-
+          </div> */}
           
-          <Numbers/>
+          <Numbers />
+
+          {/* <AnnouncementCard /> */}
           
           {/* Arnav Jain */}
           {/* Footer  */}
