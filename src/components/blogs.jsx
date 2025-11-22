@@ -27,7 +27,7 @@ export function BlogSection() {
 
   return (
     <section
-      className="relative bg-gray-100 py-16 px-4 overflow-hidden"
+      className="relative py-16 px-4 mb-40 z-30 -mt-8"
       style={{
         backgroundImage: `url('/crumpled.png')`,
         backgroundRepeat: 'no-repeat',
@@ -36,10 +36,21 @@ export function BlogSection() {
         backgroundPosition: 'center'
       }}
     >
-      <div className="absolute inset-0 bg-gray-100 opacity-60 pointer-events-none" style={{ zIndex: 0 }} />
+      <div className="absolute inset-0 bg-white opacity-40 pointer-events-none z-0" />
 
-      <div className="max-w-7xl mx-auto relative z-20">
-        
+      
+      <img 
+        src="/border.png"
+        alt="border"
+        className="pointer-events-none absolute -top-14 left-0 w-full z-20"
+      />
+      <img 
+        src="/borderbottom.png"
+        alt="border"
+        className="pointer-events-none absolute -bottom-14 left-0 w-full z-20"
+      />
+
+      <div className="max-w-7xl mx-auto relative z-30">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold">
             <span className="text-gray-900">Recent </span>
@@ -59,9 +70,6 @@ export function BlogSection() {
                   <Link href="/blog">{blog.title}</Link>
                 </h3>
                 <p className="text-gray-600 text-lg">By {blog.author}</p>
-                {blog.description && (
-                  <p className="text-sm text-gray-500 mt-2">{blog.description}</p>
-                )}
               </div>
 
               {/* 2. Image (same height for all) */}
@@ -71,6 +79,9 @@ export function BlogSection() {
                   alt={blog.title}
                   className="w-full h-full object-cover object-center"
                 />
+                {blog.description && (
+                  <p className="text-sm text-gray-500 mt-2">{blog.description}</p>
+                )}
               </div>
 
               {/* Button */}

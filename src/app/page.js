@@ -17,7 +17,7 @@ import { Footer } from '@/components/Footer';
 export default function Home() {
   return (
    
-    <div className="bg-blue-500 min-h-screen">
+    <div className="bg-blue-500 min-h-screen z-20">
       <div className="bg-white min-h-screen rounded-b-3xl p-4 shadow-lg">
         <nav className="bg-white rounded-2xl py-2 px-8 flex items-center justify-between shadow-[4px_4px_12px_rgba(0,0,0,0.5)]">
           <div className="flex items-center space-x-3">
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
          </div>
       </div>
-          <div className="flex items-start justify-center pt-20 pb-20">
+          <div className="flex items-start justify-center pt-20 pb-40">
             <div className="w-10/12 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 xl:gap-20 lg:gap-8 md:gap-2 mx-auto">
               {[
                 {
