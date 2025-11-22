@@ -1,16 +1,17 @@
 import Link from 'next/link';
 import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
 } from "@/components/ui/sheet"
 import { Office } from '@/components/office';
 import { Content } from '@/components/content';
 import { Footer } from '@/components/Footer';
 import Numbers from '@/components/Numbers';
+import { BlogSection } from '@/components/blogs';
 export default function Home() {
   return (
    
@@ -33,7 +34,7 @@ export default function Home() {
               ['Blog', '/blog'],
               ['Benefits', '/benefits'],
             ].map(([title, url]) => (
-              <a href={url} className="hover:text-blue-400 transition-colors">{title}</a>
+              <a key={url} href={url} className="hover:text-blue-400 transition-colors">{title}</a>
             ))}
           </div>
           <div className="xl:hidden lg:hidden">
@@ -60,7 +61,7 @@ export default function Home() {
               ['Blog', '/blog'],
               ['Benefits', '/benefits'],
             ].map(([title, url]) => (
-              <Link href={url} className="font-semibold hover:text-blue-400 transition-colors">{title}</Link>
+              <Link key={url} href={url} className="font-semibold hover:text-blue-400 transition-colors">{title}</Link>
             ))}
             </div>
               </SheetContent>
@@ -81,8 +82,14 @@ export default function Home() {
                   ['/5.webp', '/club', '500px'],
                   ['/6.webp', '/blog', '300px'],
                   ['/1.jpeg', '/benefits', '500px'],
-                ].map(([image, alt,width]) => (
-                  <img src={image} alt={alt} className="h-[35vh] object-cover rounded-2xl mx-4 flex-none opacity-50" style={{width}}/>
+                ].map(([image, alt, width], idx) => (
+                  <img
+                    key={`marquee1-${idx}-${image}-${width}`}
+                    src={image}
+                    alt={alt}
+                    className="h-[35vh] object-cover rounded-2xl mx-4 flex-none opacity-50"
+                    style={{ width }}
+                  />
                 ))}
               </div>
               <div className="flex animate-scroll whitespace-nowrap mt-10">
@@ -93,8 +100,14 @@ export default function Home() {
                       ['/6.webp', '/club', '300px'],
                       ['/5.webp', '/blog', '500px'],
                       ['/3.jpeg', '/benefits', '300px'],
-                  ].map(([image, alt,width]) => (
-                    <img src={image} alt={alt} className="h-[35vh] object-cover rounded-2xl mx-4 flex-none rounded-b-2xl opacity-50" style={{width}}/>
+                  ].map(([image, alt, width], idx) => (
+                    <img
+                      key={`marquee2-${idx}-${image}-${width}`}
+                      src={image}
+                      alt={alt}
+                      className="h-[35vh] object-cover rounded-2xl mx-4 flex-none rounded-b-2xl opacity-50"
+                      style={{ width }}
+                    />
                   ))}
               </div>
             </div>
@@ -135,6 +148,7 @@ export default function Home() {
               ))}
             </div>
           </div>
+          <BlogSection />
             {/* office bearers */}
           <div className="bg-white rounded-3xl shadow-lg lg:mt-0 w-[96%] mx-auto min-h-[52vh] flex items-center justify-center relative">
             <div className="bg-blue-500 rounded-3xl p-2 group absolute top-0 left-0 w-[200px] md:w-[250px] sm:w-[200]">
